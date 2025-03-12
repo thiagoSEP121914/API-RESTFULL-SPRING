@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -21,4 +22,10 @@ public class ProductService {
     public ProductModel saveProduct(ProductModel productModel) {
         return productRepository.save(productModel);
     }
+
+    public List<ProductModel> findAll () {
+        return productRepository.findAll();
+    }
+
+
 }
